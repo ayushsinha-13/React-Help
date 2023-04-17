@@ -23,8 +23,8 @@ const Home = ({navigation}) => {
         </View>
 
         <LinearGradient colors={['#cff3ff','#ffffff']} style={Styles.CardGradient}>
-          <OptionCard imageLocation={require("../Images/DONATE_1.png")} />
-          <OptionCard imageLocation={require("../Images/DONATE_2.png")} />
+          <OptionCard imageLocation={require("../Images/DONATE_1.png")} id={1} />
+          <OptionCard imageLocation={require("../Images/DONATE_2.png")} id={2}/>
         </LinearGradient>
 
         <View style={Styles.Category_View}>

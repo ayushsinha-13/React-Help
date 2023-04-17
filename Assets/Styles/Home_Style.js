@@ -7,15 +7,15 @@ const Styles = StyleSheet.create({
     backgroundColor: '#cff3ff',
   },
   Header_View: {
-    height: '8%',
+    height: '7%',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: 35,
+    fontSize: 30,
     color: '#1F2731',
     fontFamily: 'Roboto-Bold',
-    paddingTop: 10,
+    paddingTop: 15,
   },
   GuestView: {
     backgroundColor: '#cff3ff',
@@ -24,6 +24,7 @@ const Styles = StyleSheet.create({
   },
   GuestText: {
     fontSize: 30,
+    paddingLeft: 6,
     fontFamily: 'Poppins-Bold',
     color: 'black',
   },
