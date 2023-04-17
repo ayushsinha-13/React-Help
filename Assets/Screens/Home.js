@@ -3,7 +3,7 @@ import Styles from '../Styles/Home_Style'
 import Menu_Styles from '../Styles/Menu_Style'
 import { GIF_BORDER_BACKGROUND } from '../Constants'
 import LinearGradient from 'react-native-linear-gradient'
-import Carousal_Components from '../Data/Carousal_Components'
+import {Carousal_Components } from '../Data/DataIndex'
 import {FlatList, ScrollView} from 'react-native-gesture-handler'
 import {MenuIcon,Category,MenuTitle,DesignHomeBottom,ComingSoon,OptionCard} from '../Components/ComponentIndex'
 
@@ -30,7 +30,7 @@ const Home = ({navigation}) => {
         <View style={Styles.Category_View}>
           <FlatList
             data={Carousal_Components}
-            renderItem={({item}) => <Category name={item.name} callAction={navigation} destination={item.name}/>}
+            renderItem={({item}) => <Category name={item.name} callAction={navigation} destination={item.name} description={item.decription[0]}/>}
             keyExtractor={item => item.id}
             horizontal={true}
           />
