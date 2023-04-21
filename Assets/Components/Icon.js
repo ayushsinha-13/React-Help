@@ -4,7 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 const MenuIcon = (props) => {
   return (
     <View>
-          <Ionicons name={props.name} size={30} color="black" style={props.style}/>
+            <Ionicons name={props.name} size={30} color="black" style={props.style} />
     </View> 
   )
 }

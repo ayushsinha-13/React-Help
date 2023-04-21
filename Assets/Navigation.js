@@ -1,6 +1,6 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {HeaderStyleInterpolators} from '@react-navigation/stack';
-import {Home,About,ComponentScreen} from './Screens/ScreenIndex'
+import {Home,About,Components} from './Screens/ScreenIndex'
 
 const Stack = createStackNavigator();
 
@@ -25,8 +25,8 @@ const Navigation = () => {
         }}
       />
       <Stack.Screen
-        name="ComponentScreen"
-        component={ComponentScreen}
+        name="Components"
+        component={Components}
         options={{
           headerShown: false,
           headerStyleInterpolator: HeaderStyleInterpolators.forUIKit,

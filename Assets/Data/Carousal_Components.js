@@ -2,6 +2,7 @@ const Carousal_Components = [
     {
         id:1,
         name: "Setup",
+        location: "../Components/Learn/Setup",
         decription: [
             "There are two ways to create app in react native by Expo Go and React Native CLI",
             "Version 2.0"

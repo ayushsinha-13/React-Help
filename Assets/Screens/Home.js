@@ -30,7 +30,7 @@ const Home = ({navigation}) => {
         <View style={Styles.Category_View}>
           <FlatList
             data={Carousal_Components}
-            renderItem={({item}) => <Category name={item.name} callAction={navigation} destination={item.name} description={item.decription[0]}/>}
+            renderItem={({item}) => <Category id={item.id} name={item.name} callAction={navigation} destination={item.name}/>}
             keyExtractor={item => item.id}
             horizontal={true}
           />

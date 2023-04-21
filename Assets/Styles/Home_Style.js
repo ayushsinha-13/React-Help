@@ -53,8 +53,8 @@ const Styles = StyleSheet.create({
     margin: 10,
   },
   CategoryText: {
-    fontFamily: 'Roboto-Medium', 
-    color: 'white'
+    fontFamily: 'Roboto-Medium',
+    color: 'white',
   },
   ComingSoonGradient: {
     paddingTop: 20,

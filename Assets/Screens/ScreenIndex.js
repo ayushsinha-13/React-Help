@@ -1,5 +1,5 @@
 import Home from "./Home";
 import About from "./About";
-import ComponentScreen from "./Components";
+import Components from "./Components";
 
-export {Home,About,ComponentScreen}
+export {Home,About,Components}
