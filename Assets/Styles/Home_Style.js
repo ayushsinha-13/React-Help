@@ -4,7 +4,7 @@ import {GIF_BORDER_BACKGROUND} from '../Constants';
 const Styles = StyleSheet.create({
   Master_View: {
     flex: 1,
-    backgroundColor: '#cff3ff',
+    backgroundColor: '#D0CDD7',
   },
   Header_View: {
     height: '7%',
@@ -12,7 +12,7 @@ const Styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: 30,
+    fontSize: 28,
     color: '#1F2731',
     fontFamily: 'Roboto-Bold',
     paddingTop: 15,
