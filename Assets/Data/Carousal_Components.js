@@ -7,6 +7,7 @@ const Carousal_Components = [
             "There are two ways to create app in react native by Expo Go and React Native CLI",
             "Version 2.0"
         ],
+        iconName: "construct",
     },
     {
         id: 2,
@@ -15,6 +16,7 @@ const Carousal_Components = [
             "There are two ways to create app in react native by Expo Go and React Native CLI",
             "Version 2.0"
         ],
+        iconName: "pizza",
     },
     {
         id: 3,
@@ -23,6 +25,7 @@ const Carousal_Components = [
             "There are two ways to create app in react native by Expo Go and React Native CLI",
             "Version 2.0"
         ],
+        iconName: "shapes",
     },
     {
         id: 4,
@@ -31,6 +34,7 @@ const Carousal_Components = [
             "There are two ways to create app in react native by Expo Go and React Native CLI",
             "Version 2.0"
         ],
+        iconName: "book"
     },
     {
         id: 5,
@@ -39,6 +43,7 @@ const Carousal_Components = [
             "There are two ways to create app in react native by Expo Go and React Native CLI",
             "Version 2.0"
         ],
+        iconName: "tablet-portrait"
     }
 ]
 

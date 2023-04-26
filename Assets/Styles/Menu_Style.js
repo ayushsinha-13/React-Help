@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 
 const Menu_Styles = StyleSheet.create({
     LeftIcon:{
-        marginTop: 20,
+        marginTop: 17,
         marginLeft: 20
     },
     RightIcon:{

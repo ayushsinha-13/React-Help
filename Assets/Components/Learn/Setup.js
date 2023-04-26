@@ -123,7 +123,7 @@ const Setup = () => {
           <Text style={{fontSize: 14, color: '#fff'}}>yarn expo start</Text>
         </View>
       </View>
-      <View style={{marginBottom: 40}} />
+      <View style={{marginBottom: 25}} />
     </ScrollView>
   );
 };
@@ -131,8 +131,8 @@ const Setup = () => {
 const Styles = StyleSheet.create({
   headTitle: {
     color: '#000',
-    fontSize: 28,
-    fontFamily: 'Roboto-Bold',
+    fontSize: 25,
+    fontWeight: '900',
     marginLeft: 20,
   },
   title: {
@@ -149,13 +149,13 @@ const Styles = StyleSheet.create({
   detail: {
     color: '#000',
     marginTop: 20,
-    fontSize: 17,
-    fontFamily: 'Roboto-Bold',
+    fontSize: 16,
+    fontWeight:"500",
     marginHorizontal: 20,
   },
   card: {
     backgroundColor: '#fff',
-    marginTop: 30,
+    marginVertical: 25,
     paddingVertical: 20,
     borderRadius: 30,
     marginHorizontal: 15,
@@ -174,7 +174,7 @@ const Styles = StyleSheet.create({
     borderRadius: 100,
     height: 2,
     width: '90%',
-    elevation: 8,
+    elevation: 2,
   },
   dependency: {
     color: 'yellow',

@@ -2,7 +2,7 @@ import {View, TouchableOpacity} from 'react-native';
 import Styles from '../Styles/Home_Style';
 import Menu_Styles from '../Styles/Menu_Style';
 import LinearGradient from 'react-native-linear-gradient';
-import {MenuIcon, MenuTitle} from '../Components/ComponentIndex';
+import {MenuIcon, MenuTitle, Icon} from '../Components/ComponentIndex';
 import {useNavigation} from '@react-navigation/native';
 import {Setup, Example, Basic} from '../Components/Learn/LearnIndex';
 
@@ -22,12 +22,12 @@ const Components = props => {
 
   return (
     <View style={Styles.Master_View}>
-      <LinearGradient colors={['#fff', '#D0CDD7']} style={Styles.Header_View}>
+      <LinearGradient colors={['#F04385', '#FF536B']} style={Styles.Header_View}>
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-          <MenuIcon name="arrow-back" style={Menu_Styles.LeftIcon} />
+          <Icon name="arrow-back" size={40} color="#000" style={Menu_Styles.LeftIcon} />
         </TouchableOpacity>
         <MenuTitle name={name} style={Styles.title} />
-        <MenuIcon name="grid" style={Menu_Styles.RightIcon} />
+        <Icon name="grid" size={35} color="#000" style={Menu_Styles.RightIcon} />
       </LinearGradient>
       <TempScreen name={name} />
     </View>

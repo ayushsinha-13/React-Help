@@ -4,10 +4,10 @@ import {GIF_BORDER_BACKGROUND} from '../Constants';
 const Styles = StyleSheet.create({
   Master_View: {
     flex: 1,
-    backgroundColor: '#D0CDD7',
+    backgroundColor: '#FF536B',
   },
   Header_View: {
-    height: '7%',
+    height: '7.5%',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -43,14 +43,13 @@ const Styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
   CategoryComponent: {
-    borderRadius: 50,
+    borderRadius: 49,
     height: 100,
-    width: 100,
+    aspectRatio: 1,
     alignItems: 'center',
-    backgroundColor: 'purple',
-    flexDirection: 'row',
     justifyContent: 'center',
     margin: 10,
+    elevation: 2,
   },
   CategoryText: {
     fontFamily: 'Roboto-Medium',
