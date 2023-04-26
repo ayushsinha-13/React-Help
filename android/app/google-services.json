@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "413689727929",
+    "project_id": "code-native",
+    "storage_bucket": "code-native.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413689727929:android:ede006873f57f3f7690468",
+        "android_client_info": {
+          "package_name": "com.reacthelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413689727929-ahe017ti9j12h75hvuea0l4e4gm6psha.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reacthelp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "413689727929-6c7a64k7vq7c58dmf7v55o3h099gjpi5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVyIpSeqmY4sWhSFO7VU_Ppt_unCFnAuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413689727929-6c7a64k7vq7c58dmf7v55o3h099gjpi5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

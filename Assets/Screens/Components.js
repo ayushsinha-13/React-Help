@@ -2,7 +2,7 @@ import {View, TouchableOpacity} from 'react-native';
 import Styles from '../Styles/Home_Style';
 import Menu_Styles from '../Styles/Menu_Style';
 import LinearGradient from 'react-native-linear-gradient';
-import {MenuIcon, MenuTitle, Icon} from '../Components/ComponentIndex';
+import { MenuTitle, Icon} from '../Components/ComponentIndex';
 import {useNavigation} from '@react-navigation/native';
 import {Setup, Example, Basic} from '../Components/Learn/LearnIndex';
 
