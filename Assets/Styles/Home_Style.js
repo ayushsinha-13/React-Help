@@ -7,7 +7,7 @@ const Styles = StyleSheet.create({
     backgroundColor: '#FF536B',
   },
   Header_View: {
-    height: '7.5%',
+    height: 60,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -15,7 +15,7 @@ const Styles = StyleSheet.create({
     fontSize: 28,
     color: '#1F2731',
     fontFamily: 'Roboto-Bold',
-    paddingTop: 15,
+    paddingTop: 10,
   },
   GuestView: {
     backgroundColor: '#cff3ff',
@@ -43,8 +43,8 @@ const Styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
   CategoryComponent: {
-    borderRadius: 49,
-    height: 100,
+    borderRadius: 39,
+    height: 80,
     aspectRatio: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -53,6 +53,7 @@ const Styles = StyleSheet.create({
   },
   CategoryText: {
     fontFamily: 'Roboto-Medium',
+    fontSize: 10,
     color: 'white',
   },
   ComingSoonGradient: {

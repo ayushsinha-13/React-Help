@@ -2,7 +2,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import messaging from '@react-native-firebase/messaging';
 import {PermissionsAndroid} from 'react-native';
 import database from '@react-native-firebase/database';
-import {useState} from 'react';
 PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
 
 export async function requestUserPermission() {
@@ -35,13 +34,13 @@ const addNewDevices = async props => {
 
 const getFcmToken = async () => {
   let fcmToken = await AsyncStorage.getItem('fcmToken');
-  console.log(fcmToken, ' The old Token');
+  // console.log(fcmToken, ' The old Token');
 
   if (!fcmToken) {
     try {
       const fcmToken = await messaging().getToken();
       if (fcmToken) {
-        console.log(fcmToken, ' New Token');
+        // console.log(fcmToken, ' New Token');
         await AsyncStorage.setItem('fcmToken', fcmToken);
         addNewDevices({newDevice: fcmToken});
       }

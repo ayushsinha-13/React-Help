@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import Styles from '../Styles/Home_Style';
 import Menu_Styles from '../Styles/Menu_Style';
-import {GIF_BORDER_BACKGROUND, version} from '../Constants';
+import {GIF_BORDER_BACKGROUND} from '../Constants';
 import LinearGradient from 'react-native-linear-gradient';
 import {Carousal_Components} from '../Data/DataIndex';
 import {FlatList, ScrollView} from 'react-native-gesture-handler';
@@ -19,6 +19,7 @@ import {
   ComingSoon,
   OptionCard,
   Icon,
+  Menu,
 } from '../Components/ComponentIndex';
 import {useState, useEffect, useCallback} from 'react';
 import GetUpdate from '../Functions/GetUpdate';
@@ -27,7 +28,7 @@ const Home = ({navigation}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [updateModalVisible, setUpdateModalVisible] = useState(false);
   const [myData, setMyData] = useState(null);
-  const [opa, setOpa] = useState(1);
+  const [opacBack, setOpacBack] = useState(1);
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
@@ -44,12 +45,12 @@ const Home = ({navigation}) => {
 
   const UpdateNotification = () => {
     setUpdateModalVisible(!updateModalVisible);
-    updateModalVisible ? setOpa(1) : setOpa(0.3);
+    updateModalVisible ? setOpacBack(1) : setOpacBack(0.3);
   };
 
-  const setA = () => {
-    setModalVisible(!modalVisible);
-    modalVisible ? setOpa(1) : setOpa(0.3);
+  const changeModal = bool => {
+    setModalVisible(bool);
+    modalVisible ? setOpacBack(1) : setOpacBack(0.3);
   };
 
   const getData = async () => {
@@ -61,14 +62,23 @@ const Home = ({navigation}) => {
     return (
       <View
         style={{
-          backgroundColor: '#FF536B',
-          padding: 10,
+          backgroundColor: '#F04385',
+          padding: 20,
           borderRadius: 20,
+          marginHorizontal: 20,
           elevation: 8,
           marginBottom: 30,
         }}>
-        <Text style={{color: 'black',fontSize: 20, fontWeight: '600'}}> {title}</Text>
-        <Text style={{fontSize: 18}}>{desc}</Text>
+        <Text
+          style={{
+            color: 'black',
+            fontSize: 18,
+            fontWeight: '900',
+            marginBottom: 10,
+          }}>
+          {id} {'. '} {title}
+        </Text>
+        <Text style={{fontSize: 13, color: '#fff'}}>{desc}</Text>
       </View>
     );
   };
@@ -80,134 +90,12 @@ const Home = ({navigation}) => {
         <View style={{flex: 1, height: '100%', width: '100%'}}>
           <View style={{flexDirection: 'row-reverse'}}>
             <TouchableOpacity
-              onPress={() => setA()}
+              onPress={() => changeModal(false)}
               style={{paddingRight: 30, paddingTop: 30, elevation: 8}}>
               <Icon name="close" size={60} color="#fff" />
             </TouchableOpacity>
           </View>
-          <View style={{alignItems: 'center'}}>
-            <View
-              style={{
-                width: '80%',
-                backgroundColor: '#fff',
-                marginTop: 170,
-                borderRadius: 30,
-                paddingHorizontal: 30,
-                paddingVertical: 50,
-                elevation: 8,
-              }}>
-              <View
-                style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-                <View style={{alignItems: 'center'}}>
-                  <View
-                    style={{
-                      backgroundColor: '#FF536B',
-                      height: 85,
-                      width: 85,
-                      borderRadius: 10,
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      elevation: 2,
-                    }}>
-                    <Icon name="color-wand" size={40} />
-                  </View>
-                  <View style={{alignItems: 'center'}}>
-                    <Text
-                      style={{
-                        color: 'black',
-                        fontWeight: '900',
-                        fontSize: 15,
-                        marginTop: 5,
-                      }}>
-                      Animations
-                    </Text>
-                  </View>
-                </View>
-                <View style={{alignItems: 'center'}}>
-                  <View
-                    style={{
-                      backgroundColor: '#FF536B',
-                      height: 85,
-                      width: 85,
-                      borderRadius: 10,
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      elevation: 2,
-                    }}>
-                    <Icon name="color-palette" size={40} />
-                  </View>
-                  <View style={{alignItems: 'center'}}>
-                    <Text
-                      style={{
-                        color: 'black',
-                        fontWeight: '900',
-                        fontSize: 15,
-                        marginTop: 5,
-                      }}>
-                      Color Palette
-                    </Text>
-                  </View>
-                </View>
-              </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'space-evenly',
-                  marginTop: 20,
-                }}>
-                <View>
-                  <View
-                    style={{
-                      backgroundColor: '#FF536B',
-                      height: 85,
-                      width: 85,
-                      borderRadius: 10,
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      elevation: 2,
-                    }}>
-                    <Icon name="desktop" size={40} />
-                  </View>
-                  <View style={{alignItems: 'center'}}>
-                    <Text
-                      style={{
-                        color: 'black',
-                        fontWeight: '900',
-                        fontSize: 15,
-                        marginTop: 5,
-                      }}>
-                      Examples
-                    </Text>
-                  </View>
-                </View>
-                <View>
-                  <View
-                    style={{
-                      backgroundColor: '#FF536B',
-                      height: 85,
-                      width: 85,
-                      borderRadius: 10,
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      elevation: 2,
-                    }}>
-                    <Icon name="cog" size={40} />
-                  </View>
-                  <View style={{alignItems: 'center'}}>
-                    <Text
-                      style={{
-                        color: 'black',
-                        fontWeight: '900',
-                        fontSize: 15,
-                        marginTop: 5,
-                      }}>
-                      Setting
-                    </Text>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
+          <Menu changeModal={changeModal} />
         </View>
       </Modal>
 
@@ -231,12 +119,26 @@ const Home = ({navigation}) => {
                 backgroundColor: '#fff',
                 marginTop: 20,
                 borderRadius: 50,
+                paddingTop: 20,
                 paddingHorizontal: 10,
-                paddingVertical: 40,
                 elevation: 8,
               }}>
-             
-              <View>
+              <View style={{alignItems: 'center'}}>
+                <Text style={{fontSize: 30, color: '#000', fontWeight: '900'}}>
+                  Updates
+                </Text>
+              </View>
+              <View
+                style={{
+                  borderColor: '#000',
+                  backgroundColor: '#000',
+                  borderRadius: 50,
+                  borderWidth: 2,
+                  marginHorizontal: 20,
+                  marginVertical: 10,
+                }}
+              />
+              <View style={{marginTop: 20}}>
                 <FlatList
                   refreshControl={
                     <RefreshControl
@@ -271,24 +173,24 @@ const Home = ({navigation}) => {
       />
       <LinearGradient
         colors={['#9ee7ff', '#cff3ff']}
-        style={[Styles.Header_View, {opacity: opa}]}>
+        style={[Styles.Header_View, {opacity: opacBack}]}>
         <TouchableOpacity onPress={() => UpdateNotification()}>
           <Icon
             name="notifications"
             size={35}
             color="#000"
-            style={Menu_Styles.LeftIcon}
+            style={[Menu_Styles.LeftIcon, {marginTop: 12}]}
           />
         </TouchableOpacity>
         <MenuTitle name="Code Native" style={Styles.title} />
-        <TouchableOpacity onPress={() => setA()}>
+        <TouchableOpacity onPress={() => changeModal(true)}>
           <MenuIcon name="grid" style={Menu_Styles.RightIcon} />
         </TouchableOpacity>
       </LinearGradient>
 
-      <ScrollView style={{opacity: opa}}>
+      <ScrollView style={{opacity: opacBack}}>
         <View style={Styles.GuestView}>
-          <Text style={Styles.GuestText}>Hello, Guest</Text>
+          <Text style={Styles.GuestText}>Hello, Coder</Text>
           <Text style={Styles.GuestSubText}> Let's Start Learning </Text>
         </View>
 
